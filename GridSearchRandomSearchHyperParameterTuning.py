@@ -1,6 +1,7 @@
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split,GridSearchCV,RandomizedSearchCV
 from sklearn.neighbors import KNeighborsClassifier
+
 import numpy as np
 
 iris=load_iris()
@@ -21,3 +22,4 @@ knn_random_search = RandomizedSearchCV(knn,knn_param_grid,n_iter=10)
 knn_random_search.fit(X_train,y_train)
 print("knn random search best parameters: " , knn_random_search.best_params_)
 print("knn random search best accuracy: " , knn_random_search.best_score_)
+
